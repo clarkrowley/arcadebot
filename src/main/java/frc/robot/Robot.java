@@ -64,19 +64,19 @@ public class Robot extends TimedRobot {
 
     m_robotDrive.arcadeDrive(-m_stick.getLeftY(), -m_stick.getLeftX());
 
-    if(m_stick.getSquareButton()) {
-      shooter1.set(-.5);
+    if(m_stick.getCircleButton()) {
+      shooter1.set(-0.5);
       shooter2.set(-0.5);
       feeder.set(-0.5);
     } else{
-      if (m_stick.getCircleButton()) {
-        feeder.set(.8);
+      if (m_stick.getR1Button()) {
+        feeder.set(0.8);
       } else {
         feeder.set(0.);
       }
       if (m_stick.getL1Button()) {
         shooter1.set(0.9);
-        shooter2.set(.9);
+        shooter2.set(0.9);
       } else {
         shooter1.set(0.);
         shooter2.set(0.);
